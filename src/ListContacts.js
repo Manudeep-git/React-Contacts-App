@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ListContacts(props) {
+function ListContacts(props) { // if we use class ListContacts extends component then should use this.props
     //console.log('Props', this.props)
     return (
       <ol className='contact-list'>
