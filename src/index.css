@@ -148,7 +148,7 @@ body, .app {
   margin-right: 20px;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 50%;
+  border-radius: 60%;
   flex-shrink: 0;
 }
 
