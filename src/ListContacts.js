@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function ListContacts(props) { // if we use class ListContacts extends component then should use this.props
     //console.log('Props', this.props)
@@ -17,7 +18,7 @@ function ListContacts(props) { // if we use class ListContacts extends component
           <p>{contact.handle}</p>
           </div>
           <button
-          onClick ={()=> props.deleteContact(contact)} 
+          onClick ={()=> props.deleteContact(contact)}
           className='contact-remove'>
           remove
           </button>
@@ -25,6 +26,11 @@ function ListContacts(props) { // if we use class ListContacts extends component
       ))}
       </ol>
     )
+}
+
+ListContacts.propTypes = {//propTypes is not PropTypes we imported, we are adding it as property
+  contacts: PropTypes.array.isRequired,
+  deleteContact : PropTypes.func.isRequired
 }
 
 export default ListContacts
