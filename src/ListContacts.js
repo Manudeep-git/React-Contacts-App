@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom'
 
 class ListContacts extends React.Component { // if we use class ListContacts extends component then should use this.props
     //console.log('Props', this.props)
@@ -42,6 +43,10 @@ class ListContacts extends React.Component { // if we use class ListContacts ext
             value={query}
             onChange={event => this.updateQuery(event.target.value)}
           />
+          <Link//replacement for anchor tag used previously
+             to='/create'
+             className='add-contact'
+          >Add Contact</Link>
         </div>
         {/* Display message for search contacts and is valid only when user input matches characters in contacts*/ }
         {showingContacts.length!== contacts.length && (
